@@ -1,3 +1,5 @@
+package spil;
+
 public class spil {
     public static void main(String[] args) {
         int max = 6;
@@ -25,8 +27,10 @@ public class spil {
             int Dice2Player2 = (int)(Math.random()*range) + min;
             int TotalEyesPlayer2 = Dice1Player2 + Dice2Player2;
             Player2Score = Player2Score + TotalEyesPlayer2;
+
             System.out.println("Spiller 1 har " + Player1Score + " point");
             System.out.println("Spiller 2 har " + Player2Score + " point");
+
         }
 
     }
