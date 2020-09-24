@@ -32,7 +32,16 @@ public class spil {
             System.out.println("Spiller 1 har " + Player1Score + " point");
             System.out.println("Spiller 2 har " + Player2Score + " point");
             */
-        }
 
+        }
+        if (Player1Score>Player2Score) {
+            System.out.println("Spiller 1 vandt!");
+        }
+        else if (Player1Score<Player2Score) {
+            System.out.println("Spiller 2 vandt!");
+        }
+        else {
+            System.out.println("Uafgjort!");
+        }
     }
 }
