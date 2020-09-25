@@ -1,7 +1,9 @@
 package spil;
 
-public class RollDiceClass {
-    static int[] RollDicePlayer1() {
+public class RollDice {
+
+    public static int[] RollDicePlayer1() {
+        //Method that returns an array with 2 random numbers between 1 and 6.
         int[] Player1Dice = new int[2];
         int max = 6;
         int min = 1;
@@ -11,7 +13,8 @@ public class RollDiceClass {
         return Player1Dice;
 
     }
-    static int[] RollDicePlayer2() {
+    public static int[] RollDicePlayer2() {
+        // Method that returns an array with 2 random numbers between 1 and 6.
         int[] Player2Dice = new int[2];
         int max = 6;
         int min = 1;
