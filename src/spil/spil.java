@@ -45,4 +45,3 @@ public class spil {
         }
     }
 }
-//Test fra z
