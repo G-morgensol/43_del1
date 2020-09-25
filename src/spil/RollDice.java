@@ -3,7 +3,7 @@ package spil;
 public class RollDice {
 
     public static int[] RollDicePlayer1() {
-        //Method that returns an array with 2 random numbers between 1 and 6.
+        //Method that returns an array with 2 random numbers between 1 and 6. (Player 1)
         int[] Player1Dice = new int[2];
         int max = 6;
         int min = 1;
@@ -14,7 +14,7 @@ public class RollDice {
 
     }
     public static int[] RollDicePlayer2() {
-        // Method that returns an array with 2 random numbers between 1 and 6.
+        // Method that returns an array with 2 random numbers between 1 and 6. (Player 2)
         int[] Player2Dice = new int[2];
         int max = 6;
         int min = 1;
@@ -25,8 +25,8 @@ public class RollDice {
     }
 
     public static void main(String[] args) {
-        int[] Player1Dice = RollDicePlayer1();
-        int[] Player2Dice = RollDicePlayer2();
+        //int[] Player1Dice = RollDicePlayer1();
+        //int[] Player2Dice = RollDicePlayer2();
         /* //Test of the 2 Methods.
         System.out.println("Player 1 Rolls");
         System.out.println("Dice 1: " + Player1Dice[0]);
