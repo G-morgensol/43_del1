@@ -18,7 +18,7 @@ public class test {
         int Count12 = 0;
 
 
-        while (TestCount <= 50) {
+        while (TestCount <= 1000) {
             //Calls SumPlayer1() Method that rolls 2 dice and returns the sum.
             SumPlayer1();
             int TestSum = SumPlayer1();
