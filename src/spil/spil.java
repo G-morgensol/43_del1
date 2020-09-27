@@ -10,18 +10,20 @@ public class spil {
         while (Player1Score<40 || Player2Score <40) {
 
             //Defines the Total Score to be the TotalScore from last repeat, plus the new Sum from dice. Note PlayerScore starts at 0.
-            Player1Score = Player1Score + EyeSum.SumPlayer1();
-            Player2Score = Player2Score + EyeSum.SumPlayer2();
+            int eyesumlocal1 = EyeSum.SumPlayer1();
+            int eyesumlocal2 = EyeSum.SumPlayer2();
+            Player1Score = Player1Score + eyesumlocal1;
+            Player2Score = Player2Score + eyesumlocal2;
 
 
             //Check to see if Player 1 rolled two 1's.
-            if (EyeSum.SumPlayer1() == 2) {
+            if (eyesumlocal1 == 2) {
                 Player1Score = 0;
                 //System.out.println("Spiller 1 fik to 1'ere");
             }
 
             // Checks to see if Player 2 rolled two 1's.
-            if (EyeSum.SumPlayer2() == 2) {
+            if (eyesumlocal2 == 2) {
                 Player2Score = 0;
                 //System.out.println("Spiller 2 fik to 1'ere");
             }
@@ -31,6 +33,25 @@ public class spil {
                 RollDice.RollDicePlayer1();
             }
 
+            while(EyeSum.IdenticalPlayer1() != false){
+                System.out.println("Inside while loop");
+                eyesumlocal1 = EyeSum.SumPlayer1();
+                Player1Score = Player1Score + eyesumlocal1;
+                if (eyesumlocal1 == 2) {
+                    System.out.println("Set sum to 0");
+                    Player1Score = 0;
+                }
+            }
+
+            while(EyeSum.IdenticalPlayer2() != false){
+                System.out.println("Inside while loop for player 2");
+                eyesumlocal2 = EyeSum.SumPlayer2();
+                Player2Score = Player2Score + eyesumlocal2;
+                if (eyesumlocal2 == 2) {
+                    System.out.println("Set sum to 0 for player 2");
+                    Player2Score = 0;
+                }
+            }
             // First check if player 2 rolls two identical rolls, if so they get another turn.
             if(EyeSum.IdenticalPlayer2()){
                 RollDice.RollDicePlayer2();
