@@ -1,6 +1,10 @@
 package spil;
+import gui_main.GUI;
+
 public class spil {
     public static void main(String[] args) {
+        GUI gui = new GUI();
+        gui.setDice(3,4);
 
         int Player1Score = 0;
         int Player2Score = 0;
