@@ -26,6 +26,16 @@ public class spil {
                 //System.out.println("Spiller 2 fik to 1'ere");
             }
 
+            // First check if player 1 rolls two identical rolls, if so they get another turn.
+            if(EyeSum.IdenticalPlayer1()){
+                RollDice.RollDicePlayer1();
+            }
+
+            // First check if player 2 rolls two identical rolls, if so they get another turn.
+            if(EyeSum.IdenticalPlayer2()){
+                RollDice.RollDicePlayer2();
+            }
+
             //Testing every cycle
             //System.out.println(Player1Score);
             //System.out.println(Player2Score);
