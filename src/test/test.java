@@ -23,6 +23,8 @@ public class test {
             SumPlayer1();
             int TestSum = SumPlayer1();
             System.out.println((SumPlayer1()));
+
+            //Check what value the 2 dice had. If it had a particular value then adds that to the total count.
             if (TestSum == 2) {
                 Count2 = Count2 + 1;
             }
@@ -67,7 +69,7 @@ public class test {
 
             }
             System.out.println("Repeat number: " +TestCount);
-            //Adds one to the number of repeats done.
+            //Adds one to the number of iterations done.
             TestCount++;
         }
         System.out.println("Total Frequency of sums:");
