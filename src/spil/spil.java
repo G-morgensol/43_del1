@@ -17,13 +17,13 @@ public class spil {
             //Check to see if Player 1 rolled two 1's.
             if (EyeSum.SumPlayer1() == 2) {
                 Player1Score = 0;
-                System.out.println("Spiller 1 fik to 1'ere");
+                //System.out.println("Spiller 1 fik to 1'ere");
             }
 
             // Checks to see if Player 2 rolled two 1's.
             if (EyeSum.SumPlayer2() == 2) {
                 Player2Score = 0;
-                System.out.println("Spiller 2 fik to 1'ere");
+                //System.out.println("Spiller 2 fik to 1'ere");
             }
 
             //Testing every cycle
