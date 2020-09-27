@@ -6,6 +6,7 @@ public class spil {
         int Player2Score = 0;
 
         //Sets up a loop that will run until either Player1 or player2 reaches 40 or higher points. Note that it also ends if both reaches more than 40 points.
+
         while (Player1Score<40 || Player2Score <40) {
 
             //Defines the Total Score to be the TotalScore from last repeat, plus the new Sum from dice. Note PlayerScore starts at 0.
