@@ -1,22 +1,22 @@
 package spil;
 public class spil {
     public static void main(String[] args) {
-        /*
+        Players.Player2Turn();
 
-        int Player1Score = 0;
-        int Player2Score = 0;
+
+        //int Player1Score = 0;
+        //int Player2Score = 0;
 
         //Sets up a loop that will run until either Player1 or player2 reaches 40 or higher points. Note that it also ends if both reaches more than 40 points.
 
-        //boolean End = false;
-        //while (End=false) {
+        while (Players.Player1Turn()<40 && Players.Player2Turn()<40 ) {
 
-            //Player1Turn();
+            Players.Player1Turn();
 
-            //Player2Turn();
+            Players.Player2Turn();
 
         }
-
+/*
 
 
 
