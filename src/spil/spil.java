@@ -7,7 +7,9 @@ public class spil {
         //Sets up a loop that will run until either Player1 or player2 reaches 40 or higher points. Note that it also ends if both reaches more than 40 points.
 
         //Add Changes under this comment or inside PlayerTurn() method!
-        while (Players.Player1Turn()<40 && !Players.Player1End || Players.Player2Turn() <40 && !Players.Player2End) {
+        boolean Player1End = false;
+        boolean Player2End = false;
+        while (Players.Player1Turn()[0]<40 && Players.Player1Turn()[1] == 0 || Players.Player2Turn()[0] <40 && !Players.Player2End) {
 
             Players.Player1Turn();
             Players.Player2Turn();

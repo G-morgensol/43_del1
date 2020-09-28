@@ -5,7 +5,11 @@ public class Players {
     public static boolean Player2End;
     private static int TotalScore2;
     private static int TotalScore1;
-    public static int Player1Turn() {
+    public static int[] Player1Turn() {
+        int[] Player1Return = new int[2];
+        Player1Return[0] = TotalScore1;
+        Player1Return[1] = 0;
+
         //Calls 2 methods and gets 2 numbers between 1 and 6. Stores them into 2 local variables.
         int Dice1 = RollDice.RollDicePlayer1()[0];
         int Dice2 = RollDice.RollDicePlayer1()[1];
@@ -17,7 +21,7 @@ public class Players {
         //Checks for win condition.
         if (Dice1 == Dice2 && TotalScore1 >= 40) {
             System.out.println("Player 1 won with a pair of: " +Dice1 + "'s");
-            Player1End = true;
+            Player1Return[1] ++;
             System.exit(0);
         }
 
@@ -48,12 +52,15 @@ public class Players {
             }
         }
         //The Method is set to return the total score of Player 1
-        return TotalScore1;
+        return Player1Return;
     }
 
 
 
-    public static int Player2Turn() {
+    public static int[] Player2Turn() {
+        int[] Player2Return = new int[2];
+        Player2Return[0] = TotalScore2;
+        Player2Return[1] = 0;
         //Calls 2 methods and gets 2 numbers between 1 and 6. Stores them into 2 local variables.
         int Dice1 = RollDice.RollDicePlayer2()[0];
         int Dice2 = RollDice.RollDicePlayer2()[1];
@@ -94,7 +101,7 @@ public class Players {
             }
         }
         //The Method is set to return the total score of Player 1
-        return TotalScore2;
+        return Player2Return;
     }
 
 
