@@ -17,6 +17,7 @@ public class EyeSum {
     }
 
     public static void main(String[] args) {
+
         /*
         Test af SumPlayer1 methods
          System.out.println(SumPlayer1());

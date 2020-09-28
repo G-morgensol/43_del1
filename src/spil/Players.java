@@ -1,6 +1,7 @@
 package spil;
 
 public class Players {
+    private static int TotalScore2;
 /*class Player1Turn {
     int Player1Score = 0;
     int eyesumlocal = EyeSum.SumPlayer1();
@@ -12,21 +13,32 @@ public class Players {
 
 
 public static int Player2Turn() {
-
-    int eyesumlocal = EyeSum.SumPlayer2();
     int Dice1 = RollDice.RollDicePlayer2()[0];
     int Dice2 = RollDice.RollDicePlayer2()[1];
-    TotalScore2 = TotalScore2 + eyesumlocal;
-    System.out.println("Spiller 2 slog " + Dice1 + " og "+ Dice2);
+    int eyesumlocal2 = Dice1 + Dice2;
+    TotalScore2 = TotalScore2 + eyesumlocal2;
+    System.out.println("Player one rolled: " + Dice1 + " and "+ Dice2);
+    System.out.println("New total score is: " + TotalScore2);
+    if (Dice1 == Dice2) {
+    while (Dice1==Dice2) {
+        Dice1 = RollDice.RollDicePlayer2()[0];
+        Dice2 = RollDice.RollDicePlayer2()[1];
+        System.out.println("Player 2 got an extra turn and rolled: " + Dice1 + " and "+ Dice2);
+        int DiceTotal = Dice1+Dice2;
+        System.out.println("Total point: " + DiceTotal);
+        if (Dice1==Dice2) {
+            System.out.println("Player one got a pair! Rolling again.");
+        }
+    }
+    }
     return TotalScore2;
 
 
 }
 
     public static void main(String[] args) {
-    int TotalScore1 = 0;
-    int TotalScore2 = 0;
     Player2Turn();
+    System.out.println(TotalScore2);
 
 
 

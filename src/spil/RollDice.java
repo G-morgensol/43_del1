@@ -25,6 +25,11 @@ public class RollDice {
     }
 
     public static void main(String[] args) {
+
+        System.out.println(RollDicePlayer1()[0]);
+        System.out.println(RollDicePlayer1()[0]);
+        System.out.println(RollDicePlayer1()[0]);
+        System.out.println(RollDicePlayer1()[0]);
         //int[] Player1Dice = RollDicePlayer1();
         //int[] Player2Dice = RollDicePlayer2();
         /* //Test of the 2 Methods.

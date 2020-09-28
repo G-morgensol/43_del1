@@ -44,11 +44,11 @@ public class spil {
             }
 
             while(EyeSum.IdenticalPlayer1() != false){
-                System.out.println("Inside while loop");
+                System.out.println("Inside while loop player 1");
                 eyesumlocal1 = EyeSum.SumPlayer1();
                 Player1Score = Player1Score + eyesumlocal1;
                 if (eyesumlocal1 == 2) {
-                    System.out.println("Set sum to 0");
+                    System.out.println("Set sum to 0 for player 1");
                     Player1Score = 0;
                 }
             }
