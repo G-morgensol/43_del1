@@ -14,6 +14,7 @@ public class RollDice {
 
     }
     public static int[] RollDicePlayer2() {
+        //Test
         // Method that returns an array with 2 random numbers between 1 and 6. (Player 2)
         int[] Player2Dice = new int[2];
         int max = 6;
