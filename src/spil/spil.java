@@ -7,13 +7,22 @@ public class spil {
 
         //Sets up a loop that will run until either Player1 or player2 reaches 40 or higher points. Note that it also ends if both reaches more than 40 points.
 
+        boolean End = false;
+        while (End=false) {
+
+            Player1Turn();
+
+            Player2Turn();
+
+        }
+
+
+
+
         while (Player1Score<40 || Player2Score <40) {
 
             //Defines the Total Score to be the TotalScore from last repeat, plus the new Sum from dice. Note PlayerScore starts at 0.
-            int eyesumlocal1 = EyeSum.SumPlayer1();
-            int eyesumlocal2 = EyeSum.SumPlayer2();
-            Player1Score = Player1Score + eyesumlocal1;
-            Player2Score = Player2Score + eyesumlocal2;
+
 
 
             //Check to see if Player 1 rolled two 1's.
