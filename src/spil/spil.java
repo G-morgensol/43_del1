@@ -101,7 +101,24 @@ public class spil {
 
         }
 
-        //Prints out a statement to the console based on who won.
+            //Lets player win by throwing two of the same values after scoring 40 points.
+        boolean End = false;
+        while (Player1Score<40 && End == false || Player2Score <40 && End == false) {
+
+
+            if (RollDice.RollDicePlayer1()[0] == RollDice.RollDicePlayer1()[1] && Player1Score >= 40) {
+                System.out.println("Spiller 1 vandt!");
+                End = true;
+            }
+
+            if (RollDice.RollDicePlayer2()[0] == RollDice.RollDicePlayer2()[1] && Player2Score >= 40) {
+                System.out.println("Spiller 2 vandt!");
+                End = true;
+            }
+
+        }
+
+            //Prints out a statement to the console based on who won.
         if (Player1Score>Player2Score) {
             System.out.println("Spiller 1 vandt!");
         }
