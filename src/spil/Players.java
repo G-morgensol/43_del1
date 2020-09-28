@@ -23,9 +23,6 @@ public class Players {
                 }
             }
         }
-        if (TotalScore1>40) {
-            Boolean End1 = true;
-        }
         return TotalScore1;
     }
 
