@@ -5,6 +5,8 @@ public class Players {
     public static boolean Player2End;
     private static int TotalScore2;
     private static int TotalScore1;
+
+
     public static int[] Player1Turn() {
         int[] Player1Return = new int[2];
         Player1Return[0] = TotalScore1;
@@ -20,8 +22,8 @@ public class Players {
 
         //Checks for win condition.
         if (Dice1 == Dice2 && TotalScore1 >= 40) {
-            System.out.println("Player 1 won with a pair of: " +Dice1 + "'s");
-            Player1Return[1] ++;
+            System.out.println("Player 1 won with a pair of: " + Dice1 + "'s");
+            Player1Return[1]++;
             System.exit(0);
         }
 
@@ -37,8 +39,8 @@ public class Players {
                 Dice1 = RollDice.RollDicePlayer1()[0];
                 Dice2 = RollDice.RollDicePlayer1()[1];
                 if (Dice1 == Dice2 && TotalScore1 >= 40) {
-                    System.out.println("Player 1 won with a pair of: " +Dice1 + "'s");
-                    Player1End = true;
+                    System.out.println("Player 1 won with a pair of: " + Dice1 + "'s");
+                    Player1Return[1]++;
                     System.exit(0);
                 }
                 System.out.println("Player 1 got an extra turn and rolled: " + Dice1 + " and " + Dice2);
@@ -56,7 +58,6 @@ public class Players {
     }
 
 
-
     public static int[] Player2Turn() {
         int[] Player2Return = new int[2];
         Player2Return[0] = TotalScore2;
@@ -69,8 +70,8 @@ public class Players {
         int DiceTotal = Dice1 + Dice2;
         //Checks for win condition.
         if (Dice1 == Dice2 && TotalScore2 >= 40) {
-            System.out.println("Player 2 won with a pair of: " +Dice1 + "'s");
-            Player1End = true;
+            System.out.println("Player 2 won with a pair of: " + Dice1 + "'s");
+            Player2Return[1]++;
             System.exit(0);
         }
 
@@ -86,8 +87,8 @@ public class Players {
                 Dice1 = RollDice.RollDicePlayer1()[0];
                 Dice2 = RollDice.RollDicePlayer1()[1];
                 if (Dice1 == Dice2 && TotalScore2 >= 40) {
-                    System.out.println("Player 2 won with a pair of: " +Dice1 + "'s");
-                    Player2End = true;
+                    System.out.println("Player 2 won with a pair of: " + Dice1 + "'s");
+                    Player2Return[1]++;
                     System.exit(0);
                 }
                 System.out.println("Player 2 got an extra turn and rolled: " + Dice1 + " and " + Dice2);
@@ -104,8 +105,7 @@ public class Players {
         return Player2Return;
     }
 
-
-    //public static void main(String[] args) {
+    public static void main(String[] args) {
         //Player1Turn();
         //Player2Turn();
 
@@ -113,4 +113,4 @@ public class Players {
 
 
 
-    }
+    } }
