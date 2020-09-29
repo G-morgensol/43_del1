@@ -18,7 +18,12 @@ public class Players {
 
         //Gets the sum of the two die.
         int DiceTotal = Dice1 + Dice2;
-        TotalScore1 = TotalScore1 + DiceTotal;
+
+        if (DiceTotal == 2) {
+            TotalScore1 = 0;
+        }
+
+        else TotalScore1 = TotalScore1 + DiceTotal;
 
         //Checks for win condition.
         if (Dice1 == Dice2 && TotalScore1 >= 40) {
@@ -29,8 +34,12 @@ public class Players {
 
         System.out.println("Player 1 rolled: " + Dice1 + " and " + Dice2);
         System.out.println("Player 1 Score: " + TotalScore1);
+
         //Player will get an extra turn if the player gets a pair. sets up a while loop that breaks if untrue.
         if (Dice1 == Dice2) {
+
+            System.out.println("Player 1 got an extra turn");
+
             while (Dice1 == Dice2) {
                 if (DiceTotal == 2) {
                     TotalScore1 = 0;
@@ -43,7 +52,7 @@ public class Players {
                     Player1Return[1]++;
                     System.exit(0);
                 }
-                System.out.println("Player 1 got an extra turn and rolled: " + Dice1 + " and " + Dice2);
+                System.out.println("Player 1 rolled: " + Dice1 + " and " + Dice2);
                 DiceTotal = Dice1 + Dice2;
                 TotalScore1 = TotalScore1 + DiceTotal;
                 System.out.println("Player 1 Score: " + TotalScore1);
@@ -75,11 +84,18 @@ public class Players {
             System.exit(0);
         }
 
-        TotalScore2 = TotalScore2 + DiceTotal;
+        if (DiceTotal == 2) {
+            TotalScore2 = 0;
+        }
+        else TotalScore2 = TotalScore2 + DiceTotal;
+
         System.out.println("Player 2 rolled: " + Dice1 + " and " + Dice2);
         System.out.println("Player 2 Score: " + TotalScore2);
         //Player will get an extra turn if the player gets a pair. sets up a while loop that breaks if untrue.
         if (Dice1 == Dice2) {
+
+            System.out.println("Player 2 got an extra turn");
+
             while (Dice1 == Dice2) {
                 if (DiceTotal == 2) {
                     TotalScore2 = 0;
@@ -91,7 +107,7 @@ public class Players {
                     Player2Return[1]++;
                     System.exit(0);
                 }
-                System.out.println("Player 2 got an extra turn and rolled: " + Dice1 + " and " + Dice2);
+                System.out.println("Player 2 rolled: " + Dice1 + " and " + Dice2);
                 DiceTotal = Dice1 + Dice2;
                 TotalScore2 = TotalScore2 + DiceTotal;
                 System.out.println("Player 2 Score: " + TotalScore2);
