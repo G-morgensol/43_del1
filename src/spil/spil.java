@@ -2,7 +2,7 @@ package spil;
 public class spil {
     public static void main(String[] args) {
         int i = 0;
-        while(true) {
+        while (true) {
             //Starts Player 1 Turn
             System.out.println("Player 1 turn");
             Players.Player1Turn();
@@ -15,9 +15,12 @@ public class spil {
             i++;
             //Iteration print is just for testing purposes, remove at final version.
             System.out.println("Iteration: " + i);
-            if (i ==100) {
+            if (i == 100) {
                 break;
             }
         }
     }
 }
+
+
+
