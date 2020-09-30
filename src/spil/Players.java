@@ -1,7 +1,10 @@
 package spil;
 
 
+import gui_main.GUI;
+
 public class Players {
+    static GUI gui = new GUI();
     public static boolean Player1End;
     public static boolean Player2End;
     private static int TotalScore2;
@@ -10,6 +13,7 @@ public class Players {
     private static boolean checksixes2 = false;
 
     public static int[] Player1Turn() {
+
         int[] Player1Return = new int[2];
         Player1Return[0] = TotalScore1;
         Player1Return[1] = 0;
@@ -17,6 +21,8 @@ public class Players {
         //Calls 2 methods and gets 2 numbers between 1 and 6. Stores them into 2 local variables.
         int Dice1 = RollDice.RollDicePlayer1()[0];
         int Dice2 = RollDice.RollDicePlayer1()[1];
+        Players.gui.showMessage("Hej");
+        Players.gui.setDice(Dice1,Dice2);
 
         //Gets the sum of the two die.
         int DiceTotal = Dice1 + Dice2;
@@ -62,6 +68,7 @@ public class Players {
                     }
                     Dice1 = RollDice.RollDicePlayer1()[0];
                     Dice2 = RollDice.RollDicePlayer1()[1];
+                    gui.setDice(Dice1,Dice2);
                     if (Dice1 == Dice2 && TotalScore1 >= 40) {
                         System.out.println("Player 1 won with a pair of: " + Dice1 + "'s");
                         Player1Return[1]++;
@@ -97,6 +104,7 @@ public class Players {
 
         //Gets the sum of the two die.
         int DiceTotal = Dice1 + Dice2;
+        Players.gui.setDice(Dice1,Dice2);
         //Checks for win condition.
         if (Dice1 == Dice2 && TotalScore2 >= 40) {
             System.out.println("Player 2 won with a pair of: " + Dice1 + "'s");
@@ -136,6 +144,7 @@ public class Players {
                     }
                     Dice1 = RollDice.RollDicePlayer1()[0];
                     Dice2 = RollDice.RollDicePlayer1()[1];
+                    Players.gui.setDice(Dice1,Dice2);
                     if (Dice1 == Dice2 && TotalScore2 >= 40) {
                         System.out.println("Player 2 won with a pair of: " + Dice1 + "'s");
                         Player2Return[1]++;
