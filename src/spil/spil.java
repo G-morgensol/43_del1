@@ -67,7 +67,7 @@ public class spil {
                 if (checksixes) {
                     // Set player 1 score to 100 so that he wins
                     Player1Score = 100;
-                    System.out.println("Player 2 won since he rolled 2x6 twice in a row!");
+                    System.out.println("Player 1 won since he rolled 2x6 twice in a row!");
                     break;
                 } else {
                     checksixes = true;
@@ -84,7 +84,7 @@ public class spil {
             if(firstdiceplayer2 == 6 && seconddiceplayer2 == 6){
                 System.out.println("Rollled 2 sixes!");
                 if (checksixes) {
-                    // Set player 1 score to 100 so that he wins
+                    // Set player 2 score to 100 so that he wins
                     Player2Score = 100;
                     System.out.println("Player 2 won since he rolled 2x6 twice in a row!");
                     break;
