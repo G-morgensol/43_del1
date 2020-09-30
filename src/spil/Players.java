@@ -1,5 +1,6 @@
 package spil;
 
+
 public class Players {
     public static boolean Player1End;
     public static boolean Player2End;
