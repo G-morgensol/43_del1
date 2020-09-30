@@ -104,6 +104,7 @@ public class Players {
 
         //Gets the sum of the two die.
         int DiceTotal = Dice1 + Dice2;
+        Players.gui.showMessage("Hej");
         Players.gui.setDice(Dice1,Dice2);
         //Checks for win condition.
         if (Dice1 == Dice2 && TotalScore2 >= 40) {
@@ -144,6 +145,7 @@ public class Players {
                     }
                     Dice1 = RollDice.RollDicePlayer1()[0];
                     Dice2 = RollDice.RollDicePlayer1()[1];
+                    Players.gui.showMessage("Hej");
                     Players.gui.setDice(Dice1,Dice2);
                     if (Dice1 == Dice2 && TotalScore2 >= 40) {
                         System.out.println("Player 2 won with a pair of: " + Dice1 + "'s");
