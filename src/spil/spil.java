@@ -107,12 +107,12 @@ public class spil {
 
 
             if (RollDice.RollDicePlayer1()[0] == RollDice.RollDicePlayer1()[1] && Player1Score >= 40) {
-                System.out.println("Spiller 1 vandt!");
+                System.out.println("Player 1 won!");
                 End = true;
             }
 
             if (RollDice.RollDicePlayer2()[0] == RollDice.RollDicePlayer2()[1] && Player2Score >= 40) {
-                System.out.println("Spiller 2 vandt!");
+                System.out.println("Player 2 won!");
                 End = true;
             }
 
@@ -120,13 +120,13 @@ public class spil {
 
             //Prints out a statement to the console based on who won.
         if (Player1Score>Player2Score) {
-            System.out.println("Spiller 1 vandt!");
+            System.out.println("Player 1 won!");
         }
         else if (Player1Score<Player2Score) {
-            System.out.println("Spiller 2 vandt!");
+            System.out.println("Player 2 won!");
         }
         else {
-            System.out.println("Uafgjort!");
+            System.out.println("It's a tie!");
         }
     }
 }
