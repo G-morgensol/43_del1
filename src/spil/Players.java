@@ -20,6 +20,8 @@ public class Players {
         //Gets the sum of the two die.
         int DiceTotal = Dice1 + Dice2;
 
+
+
         if (DiceTotal == 2) {
             TotalScore1 = 0;
         }
