@@ -14,11 +14,12 @@ public class spil {
             Players.Player2Turn();
 
 
-            //In the unlikely case the game isnt over after 100 iterations, break;
+            //In the unlikely case the game is not over after 100 iterations, break;
             i++;
             if (i ==100) {
                 break;
             }
+
         }
     }
 }

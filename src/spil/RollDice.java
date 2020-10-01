@@ -10,8 +10,8 @@ public class RollDice {
         int range = max - min + 1;
         Player1Dice[0] = (int)(Math.random()*range) + min;
         Player1Dice[1] = (int)(Math.random()*range) + min;
-        //Player1Dice[0] = 6;
-        //Player1Dice[1] = 5;
+        Player1Dice[0] = 1;
+        Player1Dice[1] = 1;
         return Player1Dice;
 
     }
@@ -26,21 +26,11 @@ public class RollDice {
         return Player2Dice;
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         System.out.println(RollDicePlayer1()[0]);
         System.out.println(RollDicePlayer1()[0]);
         System.out.println(RollDicePlayer1()[0]);
         System.out.println(RollDicePlayer1()[0]);
-        //int[] Player1Dice = RollDicePlayer1();
-        //int[] Player2Dice = RollDicePlayer2();
-        /* //Test of the 2 Methods.
-        System.out.println("Player 1 Rolls");
-        System.out.println("Dice 1: " + Player1Dice[0]);
-        System.out.println("Dice 2: " + Player1Dice[1]);
-        System.out.println("Player 1 Rolls");
-        System.out.println("Dice 1: " + Player2Dice[0]);
-        System.out.println("Dice 2: " + Player2Dice[1]);
-*/
-    }
+    } */
 }
