@@ -1,11 +1,16 @@
 package spil;
+import java.util.Scanner;
 public class spil {
     public static void main(String[] args) {
         int i = 0;
         while(true) {
-            System.out.println("Player 1 turn");
+            Scanner nextroll = new Scanner(System.in);
+
+            System.out.println("Player 1 turn, press a button to roll");
+            nextroll.nextLine();
             Players.Player1Turn();
-            System.out.println("Player 2 turn");
+            System.out.println("Player 2 turn press a button to roll");
+            nextroll.nextLine();
             Players.Player2Turn();
 
 

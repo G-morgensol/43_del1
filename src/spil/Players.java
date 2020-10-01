@@ -1,5 +1,7 @@
 package spil;
 
+import java.util.Scanner;
+
 public class Players {
     public static boolean Player1End;
     public static boolean Player2End;
@@ -19,8 +21,6 @@ public class Players {
 
         //Gets the sum of the two die.
         int DiceTotal = Dice1 + Dice2;
-
-
 
         if (DiceTotal == 2) {
             TotalScore1 = 0;
@@ -42,9 +42,9 @@ public class Players {
         if (Dice1 == Dice2) {
 
             System.out.println("Player 1 got an extra turn");
+            Scanner nextroll = new Scanner(System.in);
 
             while (Dice1 == Dice2) {
-                System.out.println("Player 1 rolled two of the same dice! " + Dice1 + " and " + Dice2);
                 if (DiceTotal == 2) {
                     TotalScore1 = 0;
                 }
@@ -58,9 +58,10 @@ public class Players {
                         System.out.println("Player 1 has rolled two sixes once, has a chance to win if he rolls two sixes again");
                         checksixes1 = true;
                     } else {
-                        System.out.println("Player 1 failed to roll two sixes, " + Dice1 + " and " + Dice2);
                         checksixes1 = false;
                     }
+                    System.out.println("Press a button to roll again");
+                    nextroll.nextLine();
                     Dice1 = RollDice.RollDicePlayer1()[0];
                     Dice2 = RollDice.RollDicePlayer1()[1];
                     if (Dice1 == Dice2 && TotalScore1 >= 40) {
@@ -116,9 +117,8 @@ public class Players {
         if (Dice1 == Dice2) {
 
             System.out.println("Player 2 got an extra turn");
-
+            Scanner nextroll = new Scanner(System.in);
             while (Dice1 == Dice2) {
-                System.out.println("Player 2 rolled two of the same dice! " + Dice1 + " and " + Dice2);
                 if (DiceTotal == 2) {
                     TotalScore2 = 0;
                 }
@@ -132,9 +132,10 @@ public class Players {
                         System.out.println("Player 2 has rolled two sixes once, has a chance to win if he rolls two sixes again");
                         checksixes2 = true;
                     } else {
-                        System.out .println("Player 2 failed to roll two sixes, " + Dice1 + " and " + Dice2);
                         checksixes2 = false;
                     }
+                    System.out.println("Press a button to roll again");
+                    nextroll.nextLine();
                     Dice1 = RollDice.RollDicePlayer1()[0];
                     Dice2 = RollDice.RollDicePlayer1()[1];
                     if (Dice1 == Dice2 && TotalScore2 >= 40) {
