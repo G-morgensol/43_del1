@@ -10,8 +10,8 @@ public class RollDice {
         int range = max - min + 1;
         Player1Dice[0] = (int)(Math.random()*range) + min;
         Player1Dice[1] = (int)(Math.random()*range) + min;
-        Player1Dice[0] = 1;
-        Player1Dice[1] = 1;
+        //Player1Dice[0] = 1;
+        //Player1Dice[1] = 1;
         return Player1Dice;
 
     }
