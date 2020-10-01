@@ -33,5 +33,5 @@ public class ekstraopgave1 {
         } else TotalScore2 = TotalScore2 + DiceTotal;
         return TotalScore2 + DiceTotal;
 
-        }
     }
+}
