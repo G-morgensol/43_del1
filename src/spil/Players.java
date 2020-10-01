@@ -120,9 +120,6 @@ public class Players {
             System.out.println("Player 2 got an extra turn");
             Scanner nextroll = new Scanner(System.in);
             while (Dice1 == Dice2) {
-                if (DiceTotal == 2) {
-                    TotalScore2 = 0;
-                }
 
                 if(Dice1 == 6 && checksixes2) {
                     System.out.println("Player 2 has won the game by rolling two sixes in a row with a score of " + TotalScore2);
