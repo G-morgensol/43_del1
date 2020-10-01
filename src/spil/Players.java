@@ -45,9 +45,6 @@ public class Players {
             Scanner nextroll = new Scanner(System.in);
 
             while (Dice1 == Dice2) {
-                if (DiceTotal == 2) {
-                    TotalScore1 = 0;
-                }
 
                 if(Dice1 == 6 && checksixes1) {
                         System.out.println("Player 1 has won the game by rolling two sixes in a row " + TotalScore1);
@@ -71,7 +68,11 @@ public class Players {
                     }
                     System.out.println("Player 1 rolled: " + Dice1 + " and " + Dice2);
                     DiceTotal = Dice1 + Dice2;
-                    TotalScore1 = TotalScore1 + DiceTotal;
+
+                    if (DiceTotal == 2) {
+                        TotalScore1 = 0;
+
+                    } else TotalScore1 = TotalScore1 + DiceTotal;
                     System.out.println("Player 1 Score: " + TotalScore1);
 
                     if (Dice1 == Dice2) {
@@ -145,7 +146,11 @@ public class Players {
                     }
                     System.out.println("Player 2 rolled: " + Dice1 + " and " + Dice2);
                     DiceTotal = Dice1 + Dice2;
-                    TotalScore2 = TotalScore2 + DiceTotal;
+
+                    if (DiceTotal == 2) {
+                        TotalScore2 = 0;
+
+                    } else TotalScore2 = TotalScore2 + DiceTotal;
                     System.out.println("Player 2 Score: " + TotalScore2);
 
                     if (Dice1 == Dice2) {
