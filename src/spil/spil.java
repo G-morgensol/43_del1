@@ -9,7 +9,7 @@ public class spil {
             System.out.println("Player 1 turn, press enter to roll");
             nextroll.nextLine();
             Players.Player1Turn();
-            System.out.println("Player 2 turn press enter to roll");
+            System.out.println("Player 2 turn, press enter to roll");
             nextroll.nextLine();
             Players.Player2Turn();
 
