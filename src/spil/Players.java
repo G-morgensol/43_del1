@@ -57,7 +57,7 @@ public class Players {
                     } else {
                         checksixes1 = false;
                     }
-                    System.out.println("Press a button to roll again");
+                    System.out.println("Press enter to roll again");
                     nextroll.nextLine();
                     Dice1 = RollDice.RollDicePlayer1()[0];
                     Dice2 = RollDice.RollDicePlayer1()[1];
@@ -132,7 +132,7 @@ public class Players {
                     } else {
                         checksixes2 = false;
                     }
-                    System.out.println("Press a button to roll again");
+                    System.out.println("Press enter to roll again");
                     nextroll.nextLine();
                     Dice1 = RollDice.RollDicePlayer1()[0];
                     Dice2 = RollDice.RollDicePlayer1()[1];

@@ -6,10 +6,10 @@ public class spil {
         while(true) {
             Scanner nextroll = new Scanner(System.in);
 
-            System.out.println("Player 1 turn, press a button to roll");
+            System.out.println("Player 1 turn, press enter to roll");
             nextroll.nextLine();
             Players.Player1Turn();
-            System.out.println("Player 2 turn press a button to roll");
+            System.out.println("Player 2 turn press enter to roll");
             nextroll.nextLine();
             Players.Player2Turn();
 
