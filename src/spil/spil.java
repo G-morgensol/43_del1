@@ -1,45 +1,19 @@
 package spil;
 public class spil {
     public static void main(String[] args) {
-
-        int Player1Score = 0;
-        int Player2Score = 0;
-
-        //Sets up a loop that will run until either Player1 or player2 reaches 40 or higher points. Note that it also ends if both reaches more than 40 points.
-        while (Player1Score<40 || Player2Score <40) {
-
-            //Defines the Total Score to be the TotalScore from last repeat, plus the new Sum from dice. Note PlayerScore starts at 0.
-            Player1Score = Player1Score + EyeSum.SumPlayer1();
-            Player2Score = Player2Score + EyeSum.SumPlayer2();
+        int i = 0;
+        while(true) {
+            System.out.println("Player 1 turn");
+            Players.Player1Turn();
+            System.out.println("Player 2 turn");
+            Players.Player2Turn();
 
 
-            //Check to see if Player 1 rolled two 1's.
-            if (EyeSum.SumPlayer1() == 2) {
-                Player1Score = 0;
-                System.out.println("Spiller 1 fik to 1'ere");
+            //In the unlikely case the game isnt over after 100 iterations, break;
+            i++;
+            if (i ==100) {
+                break;
             }
-
-            // Checks to see if Player 2 rolled two 1's.
-            if (EyeSum.SumPlayer2() == 2) {
-                Player2Score = 0;
-                System.out.println("Spiller 2 fik to 1'ere");
-            }
-
-            //Testing every cycle
-            //System.out.println(Player1Score);
-            //System.out.println(Player2Score);
-
-        }
-
-        //Prints out a statement to the console based on who won.
-        if (Player1Score>Player2Score) {
-            System.out.println("Spiller 1 vandt!");
-        }
-        else if (Player1Score<Player2Score) {
-            System.out.println("Spiller 2 vandt!");
-        }
-        else {
-            System.out.println("Uafgjort!");
         }
     }
 }
