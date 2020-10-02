@@ -22,18 +22,18 @@ public class Players {
         //Gets the sum of the two die.
         int DiceTotal = Dice1 + Dice2;
 
-        if (DiceTotal == 2) {
-            TotalScore1 = 0;
-        }
-
-        else TotalScore1 = TotalScore1 + DiceTotal;
-
         //Checks for win condition.
         if (Dice1 == Dice2 && TotalScore1 >= 40) {
             System.out.println("Player 1 won with a pair of: " + Dice1 + "'s");
             Player1Return[1]++;
             System.exit(0);
         }
+
+        if (DiceTotal == 2) {
+            TotalScore1 = 0;
+        }
+
+        else TotalScore1 = TotalScore1 + DiceTotal;
 
         System.out.println("Player 1 rolled: " + Dice1 + " and " + Dice2);
         System.out.println("Player 1 Score: " + TotalScore1);
@@ -165,12 +165,4 @@ public class Players {
         return Player2Return;
     }
 
-    public static void main(String[] args) {
-        //Player1Turn();
-        //Player2Turn();
-
-
-
-
-
-    } }
+    }
