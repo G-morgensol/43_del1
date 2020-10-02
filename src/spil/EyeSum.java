@@ -8,8 +8,6 @@ public class EyeSum {
         return RollDice.RollDicePlayer1()[0] + RollDice.RollDicePlayer1()[1];
     }
 
-
-
     public static boolean IdenticalPlayer1() {return RollDice.RollDicePlayer1()[0] == RollDice.RollDicePlayer1()[1]; }
 
     public static boolean IdenticalPlayer2() {return RollDice.RollDicePlayer2()[0] == RollDice.RollDicePlayer2()[1]; }
