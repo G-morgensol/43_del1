@@ -1,6 +1,6 @@
 package spil;
 
-public class Eyesum {
+public class EyeSum {
 
     //Defines a method that returns the sum of the 2 dice defined in the RollDice method. (For player 1)
     public static int SumPlayer1()

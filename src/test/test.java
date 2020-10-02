@@ -1,5 +1,5 @@
 package test;
-import static spil.Eyesum.SumPlayer1;
+import static spil.EyeSum.SumPlayer1;
 
 public class test {
     public static void main(String[] args) {
