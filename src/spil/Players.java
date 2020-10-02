@@ -24,13 +24,14 @@ public class Players {
 
         //Checks for win condition.
         if (Dice1 == Dice2 && TotalScore1 >= 40) {
-            System.out.println("Player 1 won with a pair of: " + Dice1 + "'s");
+            System.out.println("Player 1 wins with a pair of: " + Dice1 + "'s");
             Player1Return[1]++;
             System.exit(0);
         }
 
         if (DiceTotal == 2) {
             TotalScore1 = 0;
+            System.out.println("Player 1 rolled two 1's and loses their points");
         }
 
         else TotalScore1 = TotalScore1 + DiceTotal;
@@ -41,18 +42,18 @@ public class Players {
         //Player will get an extra turn if the player gets a pair. sets up a while loop that breaks if untrue.
         if (Dice1 == Dice2) {
 
-            System.out.println("Player 1 got an extra turn");
+            System.out.println("Player 1 gets an extra turn");
             Scanner nextroll = new Scanner(System.in);
 
             while (Dice1 == Dice2) {
 
                 if(Dice1 == 6 && checksixes1) {
-                        System.out.println("Player 1 has won the game by rolling two sixes in a row " + TotalScore1);
+                        System.out.println("Player 1 wins the game by rolling two sixes in a row " + TotalScore1);
                         Player1Return[1]++;
                         System.exit(0);
                 } else {
                     if(Dice1 == 6) {
-                        System.out.println("Player 1 has rolled two sixes once, has a chance to win if he rolls two sixes again");
+                        System.out.println("Player 1 has rolled two sixes once, if they roll another pair of sixes in a row they win");
                         checksixes1 = true;
                     } else {
                         checksixes1 = false;
@@ -62,7 +63,7 @@ public class Players {
                     Dice1 = RollDice.RollDicePlayer1()[0];
                     Dice2 = RollDice.RollDicePlayer1()[1];
                     if (Dice1 == Dice2 && TotalScore1 >= 40) {
-                        System.out.println("Player 1 won with a pair of: " + Dice1 + "'s");
+                        System.out.println("Player 1 wins with a pair of: " + Dice1 + "'s");
                         Player1Return[1]++;
                         System.exit(0);
                     }
@@ -71,12 +72,14 @@ public class Players {
 
                     if (DiceTotal == 2) {
                         TotalScore1 = 0;
+                        System.out.println("Player 1 rolled two 1's and loses their points");
+
 
                     } else TotalScore1 = TotalScore1 + DiceTotal;
                     System.out.println("Player 1 Score: " + TotalScore1);
 
                     if (Dice1 == Dice2) {
-                        System.out.println("Player 1 got a pair! Rolling again.");
+                        System.out.println("Player 1 got a pair! Rolling again");
                     }
                 }
 
@@ -102,13 +105,15 @@ public class Players {
         int DiceTotal = Dice1 + Dice2;
         //Checks for win condition.
         if (Dice1 == Dice2 && TotalScore2 >= 40) {
-            System.out.println("Player 2 won with a pair of: " + Dice1 + "'s");
+            System.out.println("Player 2 wins with a pair of: " + Dice1 + "'s");
             Player2Return[1]++;
             System.exit(0);
         }
 
         if (DiceTotal == 2) {
             TotalScore2 = 0;
+            System.out.println("Player 2 rolled two 1's and loses their points");
+
         }
         else TotalScore2 = TotalScore2 + DiceTotal;
 
@@ -117,17 +122,17 @@ public class Players {
         //Player will get an extra turn if the player gets a pair. sets up a while loop that breaks if untrue.
         if (Dice1 == Dice2) {
 
-            System.out.println("Player 2 got an extra turn");
+            System.out.println("Player 2 gets an extra turn");
             Scanner nextroll = new Scanner(System.in);
             while (Dice1 == Dice2) {
 
                 if(Dice1 == 6 && checksixes2) {
-                    System.out.println("Player 2 has won the game by rolling two sixes in a row with a score of " + TotalScore2);
+                    System.out.println("Player 2 wins the game by rolling two sixes in a row with a score of " + TotalScore2);
                     Player2Return[1]++;
                     System.exit(0);
                 } else {
                     if(Dice1 == 6) {
-                        System.out.println("Player 2 has rolled two sixes once, has a chance to win if he rolls two sixes again");
+                        System.out.println("Player 1 has rolled two sixes once, if they roll another pair of sixes in a row they win");
                         checksixes2 = true;
                     } else {
                         checksixes2 = false;
@@ -137,7 +142,7 @@ public class Players {
                     Dice1 = RollDice.RollDicePlayer1()[0];
                     Dice2 = RollDice.RollDicePlayer1()[1];
                     if (Dice1 == Dice2 && TotalScore2 >= 40) {
-                        System.out.println("Player 2 won with a pair of: " + Dice1 + "'s");
+                        System.out.println("Player 2 wins with a pair of: " + Dice1 + "'s");
                         Player2Return[1]++;
                         System.exit(0);
                     }
@@ -146,12 +151,14 @@ public class Players {
 
                     if (DiceTotal == 2) {
                         TotalScore2 = 0;
+                        System.out.println("Player 2 rolled two 1's and loses their points");
+
 
                     } else TotalScore2 = TotalScore2 + DiceTotal;
                     System.out.println("Player 2 Score: " + TotalScore2);
 
                     if (Dice1 == Dice2) {
-                        System.out.println("Player 2 got a pair! Rolling again.");
+                        System.out.println("Player 2 got a pair! Rolling again");
                     }
 
                 }
